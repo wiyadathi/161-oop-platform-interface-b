@@ -24,6 +24,9 @@ public class Player : Character, IShootable
     void Start()
     {
         Init(100);
+        WaitTime = 0.0f;
+        ReloadTime = 2.0f;
+
     }
 
     // Update is called once per frame
