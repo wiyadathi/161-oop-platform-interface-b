@@ -1148,8 +1148,8 @@ MonoBehaviour:
   rb: {fileID: 0}
   damageHit: 0
   player: {fileID: 655134832}
-  spawnPoint: {fileID: 455771906}
-  bullet: {fileID: 115806, guid: 40466c5ac40024bbca1e4b144cdf43c2, type: 3}
+  <SpawnPoint>k__BackingField: {fileID: 455771906}
+  <Bullet>k__BackingField: {fileID: 115806, guid: 40466c5ac40024bbca1e4b144cdf43c2, type: 3}
 --- !u!1001 &757966142
 PrefabInstance:
   m_ObjectHideFlags: 0

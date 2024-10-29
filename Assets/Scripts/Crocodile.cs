@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crocodile : Enemy
+public class Crocodile : Enemy, IShootable
 {
     float attackRange;
     public float AttackRange { get { return attackRange; } set { attackRange = value; } }
     public Player player;
 
-    [SerializeField] Transform spawnPoint;
-    [SerializeField] GameObject bullet;
+    [field: SerializeField] public Transform SpawnPoint { get; set; }
+    [field: SerializeField] public GameObject Bullet { get; set; }
 
     public float ReloadTime { get; set; }
     public float WaitTime { get; set; }
@@ -39,12 +39,12 @@ public class Crocodile : Enemy
         }
     }
 
-    void Shoot()
+    public void Shoot()
     {
         if (WaitTime >= ReloadTime)
         {
             animator.SetTrigger("Shoot");
-            GameObject obj = Instantiate(bullet, spawnPoint.position, Quaternion.identity);
+            GameObject obj = Instantiate(Bullet, SpawnPoint.position, Quaternion.identity);
             //GetConponent Script Rock from obj(bullet)
             //innitialize Rock's attributes
 
